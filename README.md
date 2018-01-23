@@ -7,4 +7,4 @@ The image size created automatically is 120 * 30, fix the input size when you us
 Also, when tested in real scene, the e2e network performs not very well due to that the images' quality created automatically are still poor. If you have real image dataset and labels, it may be perfect.
 
 Attention:
-Change the path when you run these code.
+Change the path when you run these code. For some fonts and templates when generating images, please refer to https://github.com/szad670401/end-to-end-for-chinese-plate-recognition
