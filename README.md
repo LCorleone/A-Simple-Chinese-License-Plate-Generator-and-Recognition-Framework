@@ -1,5 +1,5 @@
 # hyperlpr-train_e2e
-A simple code for creating licence plate images and train e2e network based on [HyperLPR](https://github.com/zeusees/HyperLPR)  
+A simple code for creating licence plate images and train e2e network based on [HyperLPR](https://github.com/zeusees/HyperLPR)   
 Sorry, i will update this project during chinese new year！！！
 # To do  
 * CRNN-CTC 
