@@ -1,2 +1,4 @@
 img_data.npy
 label.txt
+e2e_model.h5
+train_data.pkl

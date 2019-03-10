@@ -58,7 +58,7 @@ def genBatch(batchSize, outputPath):
     label_store = []
     for i in range(batchSize):
         print('create num:' + str(i))
-        label, name, img = gen_sample(genplate_advanced, 100, 32)
+        label, name, img = gen_sample(genplate_advanced, 120, 30)
         label_store.append(label)
         filename = os.path.join(outputPath, str(i).zfill(4) + ".jpg")
         # filename = os.path.join(outputPath, label + ".jpg")
@@ -70,7 +70,7 @@ def genBatch(batchSize, outputPath):
     # label_store.to_csv('label.txt')
 
 
-batchSize = 10
+batchSize = 5000
 path = './data/train_data'
 font_ch = './font/platech.ttf'
 font_en = './font/platechar.ttf'
@@ -86,12 +86,12 @@ for i in range(batchSize):
         b[i, int(a[i, j])] = int(a[i, j])
 
 # create image train data
-# img_data = np.zeros([batchSize, 32, 100, 3])
-# for i in range(batchSize):
-#     img_path = path + '/' + str(i).zfill(4) + ".jpg"
-#     img_temp = cv2.imread(img_path)
-#     img_temp = np.reshape(img_temp, (32, 100, 3))
-#     img_data[i, :, :, :] = img_temp
+img_data = np.zeros([batchSize, 30, 120, 3])
+for i in range(batchSize):
+    img_path = path + '/' + str(i).zfill(4) + ".jpg"
+    img_temp = cv2.imread(img_path)
+    img_temp = np.reshape(img_temp, (30, 120, 3))
+    img_data[i, :, :, :] = img_temp
 
 
 print(b)

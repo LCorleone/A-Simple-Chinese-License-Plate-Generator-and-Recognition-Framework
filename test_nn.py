@@ -46,8 +46,8 @@ class NormLayer(Layer):
         # return dict(list(base_config.items()) + list(config.items()))
 
 
-e2e_model = load_model('e2e_model_v4.h5', custom_objects={'NormLayer': NormLayer})
-label_path = '/home/lxy/documents/e2e_car/label.txt'
+e2e_model = load_model('e2e_model.h5', custom_objects={'NormLayer': NormLayer})
+label_path = 'label.txt'
 tem_label = np.loadtxt(label_path)
 row, col = tem_label.shape
 label1 = np.zeros([row, 31])
@@ -67,7 +67,7 @@ for i in range(row):
     label7[i, int(tem_label[i, 6]) - 31] = 1
 
 
-img_path = '/home/lxy/documents/e2e_car/img_data.npy'
+img_path = './train_data.pkl'
 img_data = np.load(img_path)
 img_data = img_data.transpose(0, 2, 1, 3)
 

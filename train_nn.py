@@ -96,7 +96,7 @@ class train_e2e:
         pkl_file = open(img_path, 'rb')
         U_subject = pickle.load(pkl_file)
         '''
-        img_path = './img_data.npy'
+        img_path = './train_data.pkl'
         self.img_data = np.load(img_path)
         self.img_data = self.img_data.transpose(0, 2, 1, 3)
 
