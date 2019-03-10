@@ -20,6 +20,7 @@ A simple code for creating licence plate images and train e2e network based on [
 * reset the train data path and run train_nn.py to train your model.
 
 ## Attention
-The image size created automatically is 120 * 30, fix the input size when you use the e2e network. You can create and train your own e2e network if you want.  
-Also, when tested in real scene, the e2e network performs not very well due to that the images' quality created automatically are still poor. If you have real image dataset and labels, it may be perfect.  
+* The image size created automatically is 120 * 30, fix the input size when you use the e2e network. You can create and train your own e2e network if you want.  
+* Generate at least 50000 images for training, less may degrade the performance.
+* Also, when tested in real scene, the e2e network performs not very well due to that the images' quality created automatically are still poor. If you have real image dataset and labels, it may be perfect.  
 
